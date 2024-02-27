@@ -25,11 +25,29 @@
             color: #fff;
         }
 
-    header h1 {
-    background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8a2be2);
-    -webkit-background-clip: text;
-    background-clip: text;
+
+h1 {
     color: transparent;
+    font-size: 3em; /* Adjust font size as needed */
+    position: relative;
+    z-index: 1;
+}
+
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff; /* Default text color */
+    text-shadow: 
+        0 0 5px red,
+        0 0 10px orange,
+        0 0 15px yellow,
+        0 0 20px green,
+        0 0 25px blue,
+        0 0 30px indigo,
+        0 0 35px violet;
+    z-index: -1;
 }
 
         nav {
