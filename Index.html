@@ -5,270 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('generate-an-image-for-my-bookstore-website-which-h-upscaled.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-      header     { background-color: #333;
-            background-image: url('an-header-image-for-my-book-store-website-more-pre-upscaled.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-            
-        }         
-
-
-       header h1 {
-    background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8a2be2);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-        nav {
-            background-color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-      
-
-        nav ul li {
-    display: inline-block; 
-    margin-right: 20px;
-    position: relative; 
-}
-
-nav ul li::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px; 
-    background-color: transparent;
-    transition: background-color 0.3s ease; 
-}
-
-nav ul li:hover::after {
-    background-color: #fff; 
-}
-
-
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: hsla(242, 65%, 22%, 0.33);
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.936);
-            z-index: 1;
-        }
-
-        main {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .book {
-            background-color: red;
-            padding: 20px;
-            margin: 10px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        h1, h2 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        .book-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .book {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.book:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-}
-
-        .book img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #888;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-content button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .modal-content button:hover {
-            background-color: #555;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        #gandhi h2 {
-    color: rgb(255, 0, 13); 
-
-    padding: 10px; 
-    border-radius: 5px; 
-}
-
-
-
-
-#surya h2 {
-    color: rgb(255, 0, 0); 
+    <link rel="stylesheet" href="Style.css">
     
-    padding: 10px; 
-    border-radius: 5px; 
-}
-
-
-
-#shardya h2 {
-    color: rgb(255, 0, 0); 
-    
-    padding: 10px; 
-    border-radius: 5px;
-}
-
-
-
-#ramya h2 {
-    color: rgb(255, 0, 0); 
-    
-    padding: 10px; 
-    border-radius: 5px;
-}
-
-
-
-#Janu h2 {
-    color: rgb(255, 0, 0); 
-    
-    padding: 10px;
-    border-radius: 5px; 
-}
-
-
-    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Bookstore</h1>
+     <h1>Welcome To Our Bookstore
+
+     </h1>
     </header>
 
 
 
 
     <nav>
+        
+            <marquee  direction="left"> "Discover Your Reflection: Books are the mirrors of the soul. Explore our collection and find your reflection. Purchase from us today!"</marquee>
+      
         <ul>
             <nav>
                 <ul>
@@ -280,13 +33,14 @@ nav ul li:hover::after {
                             <a href="#ramya">Editor's Picks</a>
                             <a href="#surya">Featured Authors(Martin Amis)</a>
                             <a href="#Janu"> Staff Recommendations </a>
+                            
                            
                         </div>
                     </li>
-                    <!-- Other navigation links -->
+                   
                 </ul>
             </nav>
-           
+        </header>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Stores</a>
                 <div class="dropdown-content">
@@ -306,6 +60,7 @@ nav ul li:hover::after {
 <a href="surya">House Of Meetings</a>
 <a href="surya">Yellow Dog</a>
 <a href="Janu"> Alive</a>
+<a href="Book.html">Other Books</a>
 
             </li>
             <li class = "dropdown">
@@ -380,7 +135,7 @@ nav ul li:hover::after {
                 <p>423 rs</p>
             </div>
             <div class="book-container">
-                <!-- Add your books for Editor's Picks -->
+               
                 <div class="book small-book" onclick="showModal('editors-pick2-details')">
                     <img src="Greatcircle.jpg" alt="Great Circle" height="50%">
                     <h3>Great Circle</h3>
@@ -430,14 +185,14 @@ nav ul li:hover::after {
             </div>
         </section>
     
-            <!-- Modal for Book 1 -->
+            
             <div id="book13-details" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="hideModal('book13-details')">&times;</span>
                     <h2>Alive</h2>
                     <p>Alive tells the story of an Uruguayan rugby team (who were alumni of Stella Maris College), and their friends and family who were involved in the airplane crash of Uruguayan Air Force Flight 571. The plane crashed into the Andes mountains on Friday 13 October 1972.</p>
                     <p>Number of Purchases: 4360</p>
-                    <button>Add to Cart</button>
+                    <button> to Cart</button>
                     <button>Buy Online</button>
                     <button>Buy from Nearby Store</button>
                 </div>
@@ -454,7 +209,7 @@ nav ul li:hover::after {
         </div>
     </div>
 
-    <!-- Modal for Book 2 -->
+
     <div id="book2-details" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideModal('book2-details')">&times;</span>
@@ -467,7 +222,7 @@ nav ul li:hover::after {
         </div>
     </div>
 
-    <!-- Modal for Book 3 -->
+  
     <div id="book3-details" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideModal('book3-details')">&times;</span>
@@ -507,7 +262,7 @@ nav ul li:hover::after {
     </div>
 </div>
 
-<!-- Modal for Editor's Pick 2 -->
+
 <div id="editors-pick2-details" class="modal">
     <div class="modal-content">
         <span class="close" onclick="hideModal('editors-pick2-details')">&times;</span>
@@ -543,7 +298,7 @@ nav ul li:hover::after {
 </div>
 
 
-    <!-- Add more sections for other modules like Featured Authors, Readers' Choice, etc. -->
+ 
     
 
     <script>
@@ -560,6 +315,6 @@ nav ul li:hover::after {
         }
     </script>
 
-    
+
 </body>
 </html>
